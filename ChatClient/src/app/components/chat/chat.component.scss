@@ -1,0 +1,19 @@
+.container {
+  display: block;
+}
+.card {
+  clear: both;
+  float: right;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  width: fit-content;
+}
+.friend {
+  clear: both;
+  float: left;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(240, 255, 247);
+  width: fit-content;
+}

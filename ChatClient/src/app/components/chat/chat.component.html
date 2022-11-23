@@ -1,0 +1,31 @@
+<form (submit)="accessForGroup()">
+  <input
+    placeholder="Group Id"
+    [(ngModel)]="groupId"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <input
+    placeholder="Tên"
+    [(ngModel)]="name"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <button type="submit">Access</button>
+</form>
+<form (submit)="send()">
+  <input
+    placeholder="Vui lòng nhập tin nhắn"
+    [(ngModel)]="messageData"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <button type="submit">Send</button>
+</form>
+
+<div class="container">
+  <div
+    *ngFor="let message of messages"
+    [class]="message.from == name ? 'card' : 'friend'"
+  >
+    <p>{{ message.content }}</p>
+    <span>{{ message.createdAt | date }}</span>
+  </div>
+</div>
